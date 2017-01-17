@@ -1,0 +1,15 @@
+{
+  "port": 5000,
+  "mongoClient": {
+    "uri": "mongodb://kirill:5555@ds161028.mlab.com:61028/movies"
+  },
+  "session": {
+    "secret": "KrystsiaMongo",
+    "key": "sid",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  }
+}

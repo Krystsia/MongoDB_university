@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1 List of Movies
+  if data
+    ul
+      each val in data
+        li 
+          p #{val.title}
+          p 
+            span #{val.year}
+            span #{val.imbd}
+  form(action="/addMovie" method="POST" name="loginForm")
+    label.elegant-label(for="title") Title
+    input.elegant-input(type="text" name="title" placeholder="Title" class="required" id="title")
+    label.elegant-label(for="year") Year
+    input.elegant-input(type="test" name="year" id="year" placeholder="Year" class="required")
+    label.elegant-label(for="imbd") IMBD
+    input.elegant-input(type="test" name="imbd" id="imbd" placeholder="IMBD" class="required")
+    input.elegant-button(type='submit' name='submit' value="submit")
